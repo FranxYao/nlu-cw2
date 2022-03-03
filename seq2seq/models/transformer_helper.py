@@ -30,9 +30,9 @@ class TransformerEncoderLayer(nn.Module):
 
         '''
         ___QUESTION-6-DESCRIBE-D-START___
-        What is the purpose of encoder_padding_mask? What will the output shape of `state' Tensor 
-        be after multi-head attention? HINT: formulate your  answer in terms of 
-        constituent variables like batch_size, embed_dim etc...
+        1.  Add tensor shape annotation to EVERY TENSOR below (NOT just the output tensor)
+        2.  What is the purpose of encoder_padding_mask? 
+        3.  What will the output shape of `state' Tensor be after multi-head attention?
         '''
         state, _ = self.self_attn(query=state, key=state, value=state, key_padding_mask=encoder_padding_mask)
         '''
@@ -113,8 +113,10 @@ class TransformerDecoderLayer(nn.Module):
         residual = state.clone()
         '''
         ___QUESTION-6-DESCRIBE-E-START___
-        How does encoder attention differ from self attention? What is the difference between key_padding_mask 
-        and attn_mask? If you understand this difference, then why don't we need to give attn_mask here?
+        1.  Add tensor shape annotation to EVERY TENSOR below (NOT just the output tensor)
+        2.  How does encoder attention differ from self attention? 
+        3.  What is the difference between key_padding_mask and attn_mask? 
+        4.  If you understand this difference, then why don't we need to give attn_mask here?
         '''
         state, attn = self.encoder_attn(query=state,
                                         key=encoder_out,

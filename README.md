@@ -1,22 +1,19 @@
-NLU+ Coursework 2 (2020-21)
+NLU+ Coursework 2 (2021-22)
 ---
-##### Tom Sherborne and Mirella Lapata
+##### Yao Fu and Frank Keller
 
-###### Prior versions from Denis Emelin, Jon Mallinson, Ida Szubert and Rico Sennrich 
+###### Prior versions from Tom Sherborne Mirella Lapata, Denis Emelin, Jon Mallinson, Ida Szubert and Rico Sennrich 
 
 ---
 This repository contains the data and materials for the second coursework of INFR11157 (2020-21).
 
 To get started, clone the repository:
 ```bash
-git clone https://github.com/tomsherborne/nlu_cw2
+git clone https://github.com/FranxYao/nlu-cw2
 ```
-The first thing you should do is set up a working Conda environment for your work. The `requirements.txt` file has been updated here. So run `conda create` if you want to create a brand new NLU environment OR run `conda install --file requirements.txt` to update your existing environment.
 
-```bash
-conda create -n nlu --file ./requirements.txt -c pytorch
-```
-Then, continue following the instructions in the instruction sheet available on Blackboard Learn.
+Then follow the instruction from the Course Work 2 handout.
+
 
 ##### Acnowledgements
 This code is based on [Binh Tang's NMT Tutorial](https://github.com/tangbinh/machine-translation) and the data is a sample

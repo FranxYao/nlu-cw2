@@ -138,8 +138,13 @@ class LSTMEncoder(Seq2SeqEncoder):
 
         '''
         ___QUESTION-1-DESCRIBE-A-START___
-        Describe what happens when self.bidirectional is set to True. 
-        What is the difference between final_hidden_states and final_cell_states?
+        1.  Add tensor shape annotation to each of the output tensor
+            output tensor means tensors on the left hand side of "="
+            e.g., 
+                sent_tensor = create_sentence_tensor(...) 
+                # sent_tensor.size = [batch, sent_len, hidden]
+        2.  Describe what happens when self.bidirectional is set to True. 
+        3.  What is the difference between final_hidden_states and final_cell_states?
         '''
         if self.bidirectional:
             def combine_directions(outs):
@@ -178,7 +183,13 @@ class AttentionLayer(nn.Module):
 
         '''
         ___QUESTION-1-DESCRIBE-B-START___
-        Describe how the attention context vector is calculated. Why do we need to apply a mask to the attention scores?
+        1.  Add tensor shape annotation to each of the output tensor
+            output tensor means tensors on the left hand side of "="
+            e.g., 
+                sent_tensor = create_sentence_tensor(...) 
+                # sent_tensor.size = [batch, sent_len, hidden]
+        2.  Describe how the attention context vector is calculated. 
+        3.  Why do we need to apply a mask to the attention scores?
         '''
         if src_mask is not None:
             src_mask = src_mask.unsqueeze(dim=1)
@@ -197,8 +208,9 @@ class AttentionLayer(nn.Module):
 
         '''
         ___QUESTION-1-DESCRIBE-C-START___
-        How are attention scores calculated? What role does matrix multiplication (i.e. torch.bmm()) play 
-        in aligning encoder and decoder representations?
+        1.  Add tensor shape annotation to each of the output tensor
+        2.  How are attention scores calculated? 
+        3.  What role does batch matrix multiplication (i.e. torch.bmm()) play in aligning encoder and decoder representations?
         '''
         projected_encoder_out = self.src_projection(encoder_out).transpose(2, 1)
         attn_scores = torch.bmm(tgt_input.unsqueeze(dim=1), projected_encoder_out)
@@ -275,7 +287,10 @@ class LSTMDecoder(Seq2SeqDecoder):
         # Initialize previous states (or retrieve from cache during incremental generation)
         '''
         ___QUESTION-1-DESCRIBE-D-START___
-        Describe how the decoder state is initialized. When is cached_state == None? What role does input_feed play?
+        1.  Add tensor shape annotation to each of the output tensor
+        2.  Describe how the decoder state is initialized. 
+        3.  When is cached_state == None? 
+        4.  What role does input_feed play?
         '''
         cached_state = utils.get_incremental_state(self, incremental_state, 'cached_state')
         if cached_state is not None:
@@ -308,8 +323,10 @@ class LSTMDecoder(Seq2SeqDecoder):
 
             '''
             ___QUESTION-1-DESCRIBE-E-START___
-            How is attention integrated into the decoder? Why is the attention function given the previous 
-            target state as one of its inputs? What is the purpose of the dropout layer?
+            1.  Add tensor shape annotation to each of the output tensor
+            2.  How is attention integrated into the decoder? 
+            3.  Why is the attention function given the previous target state as one of its inputs? 
+            4.  What is the purpose of the dropout layer?
             '''
             if self.attention is None:
                 input_feed = tgt_hidden_states[-1]

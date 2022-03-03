@@ -95,8 +95,9 @@ class TransformerEncoder(Seq2SeqEncoder):
 
         '''
         ___QUESTION-6-DESCRIBE-A-START___
-        What is the purpose of the positional embeddings in the encoder and decoder? Why can't we use only
-        the embeddings similar to for the LSTM? 
+        1.  Add tensor shape annotation to each of the output tensor
+        2.  What is the purpose of the positional embeddings in the encoder and decoder? 
+        3.  Why can't we use only the embeddings similar to for the LSTM? 
         '''
         embeddings += self.embed_positions(src_tokens)
         '''
@@ -185,8 +186,10 @@ class TransformerDecoder(Seq2SeqDecoder):
             encoder_state = encoder_out['src_out'] if encoder_out is not None else None
             '''
             ___QUESTION-6-DESCRIBE-B-START___
-            What is the purpose of self_attn_mask? Why do we need it in the decoder but not in the encoder?
-            Why do we not need a mask for incremental decoding?
+            1.  Add tensor shape annotation to each of the output tensor
+            2.  What is the purpose of self_attn_mask? 
+            3.  Why do we need it in the decoder but not in the encoder?
+            4.  Why do we not need a mask for incremental decoding?
             '''
             self_attn_mask = self.buffered_future_mask(forward_state) if incremental_state is None else None
             '''
@@ -213,8 +216,10 @@ class TransformerDecoder(Seq2SeqDecoder):
         if not features_only:
             '''
             ___QUESTION-6-DESCRIBE-C-START___
-            Why do we need a linear projection after the decoder layers? What is the dimensionality of forward_state
-            after this line? What would the output represent if features_only=True?
+            1.  Add tensor shape annotation to each of the output tensor
+            2.  Why do we need a linear projection after the decoder layers? 
+            3.  What is the dimensionality of forward_state after this line? 
+            4.  What would the output represent if features_only=True?
             '''
             forward_state = self.embed_out(forward_state)
             '''

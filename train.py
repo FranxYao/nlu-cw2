@@ -119,7 +119,8 @@ def main(args):
 
             '''
             ___QUESTION-1-DESCRIBE-F-START___
-            Describe what the following lines of code do.
+            1.  Add tensor shape annotation to each of the output tensor
+            2.  Add line-by-line description about the following lines of code do.
             '''
             output, _ = model(sample['src_tokens'], sample['src_lengths'], sample['tgt_inputs'])
 
