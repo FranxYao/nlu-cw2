@@ -134,4 +134,3 @@ results/
 *.cypthon-37.pyc
 .DS_Store
 *.ipynb
-example.sh
