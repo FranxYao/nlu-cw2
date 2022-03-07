@@ -172,7 +172,7 @@ class AttentionLayer(nn.Module):
     def forward(self, tgt_input, encoder_out, src_mask):
         # tgt_input has shape = [batch_size, input_dims]
         # encoder_out has shape = [src_time_steps, batch_size, output_dims]
-        # src_mask has shape = [src_time_steps, batch_size]
+        # src_mask has shape = [batch_size, src_time_steps]
 
         # Get attention scores
         # [batch_size, src_time_steps, output_dims]
