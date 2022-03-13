@@ -197,6 +197,7 @@ class AttentionLayer(nn.Module):
 
         attn_weights = F.softmax(attn_scores, dim=-1)
         attn_context = torch.bmm(attn_weights, encoder_out).squeeze(dim=1)
+
         context_plus_hidden = torch.cat([tgt_input, attn_context], dim=1)
         attn_out = torch.tanh(self.context_plus_hidden_projection(context_plus_hidden))
         '''___QUESTION-1-DESCRIBE-B-END___'''
