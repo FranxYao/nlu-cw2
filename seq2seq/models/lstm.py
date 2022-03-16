@@ -55,7 +55,7 @@ class LSTMModel(Seq2SeqModel):
                               embed_dim=args.encoder_embed_dim,
                               hidden_size=args.encoder_hidden_size,
                               num_layers=args.encoder_num_layers,
-                              bidirectional=args.encoder_bidirectional,
+                              bidirectional=bool(eval(args.encoder_bidirectional)),
                               dropout_in=args.encoder_dropout_in,
                               dropout_out=args.encoder_dropout_out,
                               pretrained_embedding=encoder_pretrained_embedding)
