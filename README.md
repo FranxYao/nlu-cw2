@@ -1,6 +1,6 @@
-NLU+ Coursework 2 (2021-22)
+NLU+ Coursework 2 (2023 Spring)
 ---
-##### Yao Fu and Frank Keller
+##### Yao Fu and Frank Keller and Alexandra Birch-Mayne
 
 ###### Prior versions from Tom Sherborne Mirella Lapata, Denis Emelin, Jon Mallinson, Ida Szubert and Rico Sennrich 
 
