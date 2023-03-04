@@ -150,7 +150,7 @@ class MultiHeadAttention(nn.Module):
                  self_attention=False,
                  encoder_decoder_attention=False):
         '''
-        ___QUESTION-7-MULTIHEAD-ATTENTION-NOTE
+        ___QUESTION-6-MULTIHEAD-ATTENTION-NOTE
         You shouldn't need to change the __init__ of this class for your attention implementation
         '''
         super().__init__()
@@ -197,7 +197,7 @@ class MultiHeadAttention(nn.Module):
         assert self.embed_dim == embed_dim
 
         '''
-        ___QUESTION-7-MULTIHEAD-ATTENTION-START
+        ___QUESTION-6-MULTIHEAD-ATTENTION-START
         Implement Multi-Head attention  according to Section 3.2.2 of https://arxiv.org/pdf/1706.03762.pdf.
         Note that you will have to handle edge cases for best model performance. Consider what behaviour should
         be expected if attn_mask or key_padding_mask are given?
@@ -213,7 +213,7 @@ class MultiHeadAttention(nn.Module):
         # TODO: --------------------------------------------------------------------- CUT
 
         '''
-        ___QUESTION-7-MULTIHEAD-ATTENTION-END
+        ___QUESTION-6-MULTIHEAD-ATTENTION-END
         '''
 
         return attn, attn_weights
