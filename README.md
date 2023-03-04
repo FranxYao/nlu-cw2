@@ -5,7 +5,7 @@ NLU+ Coursework 2 (2021-22)
 ###### Prior versions from Tom Sherborne Mirella Lapata, Denis Emelin, Jon Mallinson, Ida Szubert and Rico Sennrich 
 
 ---
-This repository contains the data and materials for the second coursework of INFR11157 (2021-22).
+This repository contains the data and materials for the second coursework of NLU+ 2023 Spring.
 
 To get started, clone the repository:
 ```bash

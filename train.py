@@ -118,7 +118,7 @@ def main(args):
             model.train()
 
             '''
-            ___QUESTION-1-DESCRIBE-F-START___
+            ___QUESTION-1-DESCRIBE-E-START___
             1.  Add tensor shape annotation to each of the output tensor
             2.  Add line-by-line description about the following lines of code do.
             '''
@@ -130,7 +130,7 @@ def main(args):
             grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), args.clip_norm)
             optimizer.step()
             optimizer.zero_grad()
-            '''___QUESTION-1-DESCRIBE-F-END___'''
+            '''___QUESTION-1-DESCRIBE-E-END___'''
 
             # Update statistics for progress bar
             total_loss, num_tokens, batch_size = loss.item(), sample['num_tokens'], len(sample['src_tokens'])
